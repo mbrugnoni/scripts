@@ -6,10 +6,15 @@
 #
 
 # Variables
-dotfiles=( ".bashrc" )
+dotfiles=( ".bashrc" ".profile" ".tmux.conf" )
 
 # Clone dotfiles from git repo
 git clone https://github.com/mbrugnoni/dotfiles.git ~/dotfiles
 
-# Backup existing dotfiles just incase
+# Backup current dotfiles and copy new ones in from git repo
+for $i in "${dotfiles[@]}"
+do
+	cp ~/$i ~/bkp
+	cp ~/dotfiles/$i ~
+done
 
