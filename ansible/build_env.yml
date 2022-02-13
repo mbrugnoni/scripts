@@ -1,0 +1,9 @@
+---
+
+- name: Build out my desired linux environment
+  gather_facts: false
+  become: true
+  hosts: localhost
+  roles:
+    - azure-cli
+    - github
