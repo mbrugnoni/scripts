@@ -5,7 +5,7 @@
   become: true
   hosts: localhost
   roles:
-    - azure-cli
+  #  - azure-cli
     - github
     - tmux
     - neovim
